@@ -3,7 +3,7 @@ $(function () {});
 // Variables
 var today = moment().format("dddd, MMMM Do");
 var now = moment().format("H A");
- var hoursArray = [9,10,11, 12, 13, 14, 16, 17]
+ var hoursArray = [9,10,11, 12, 13, 14, 16, 17,]
 
 
 
@@ -21,7 +21,7 @@ $("#currentDay").text(today);
 hoursArray.forEach(function(timeBlock, index) {
 	var timeLabel = timeBlock.time;
 	var blockColor = colorRow(timeLabel);
-	var row ='<div class="time-block" id="' + 
+	var row ='<div class="time-block" id="'  + 
 	index +'"><div class="row no-gutters input-group"><div class="col-sm col-lg-1 input-group-prepend hour justify-content-sm-end pr-3 pt-3">' +
 	timeLabel +'</div><textarea class="form-control ' +
 	blockColor + '">' +
