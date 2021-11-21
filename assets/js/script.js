@@ -25,17 +25,16 @@ hoursArray.forEach(function(timeBlock, index) {
 	blockColor + '">' +
 	timeBlock.event +'</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-save"></i></button></div></div></div>';
 
-	
 	$(".container").append(row);
 });
 
 // base in time add colors
 function colorRow(time) {
-	var planNow = moment(now, "H A");
-	var planEntry = moment(time, "H A");
-	if (planNow.isBefore(planEntry) === true) {
+	var hoursNow = moment(now, "H A");
+	var hourEntry = moment(time, "H A");
+	if (hoursNow.isBefore(hourEntry) === true) {
 		return "future";
-	} else if (planNow.isAfter(planEntry) === true) {
+	} else if (hoursNow.isAfter(hourEntry) === true) {
 		return "past";
 	} else {
 		return "present";
