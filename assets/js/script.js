@@ -15,7 +15,7 @@ if (workEvents) {
 // Get current day
 $("#currentDay").text(today);
 
-// add color
+// add color and create textarea 
 hoursArray.forEach(function(timeBlock, index) {
 	var timeLabel = timeBlock.time;
 	var blockColor = colorRow(timeLabel);
