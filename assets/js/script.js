@@ -1,86 +1,79 @@
-//
+$(function () {});
+  
+/* Declare Variables */
+var today = moment().format("dddd, MMMM Do");
 
-// this added current time on top ("MMM Do YYY" abbreviation) (MMMM Do("" o"add th) YYYY) full date )
-var currentDay = moment().format("MMMM Do YYYY");
-$("#currentDay").text(currentDay);
+var now = moment().format("H A");
 
-//change color relative to now
-var currentColor = $(".hour");
-var now = parseInt(moment().format("H"));
+/* planWorkday entries for each hour of the workday */
+var planWorkday = [
+  { time: "9 AM", event: "" },
+  { time: "10 AM", event: "" },
+  { time: "11 AM", event: "" },
+  { time: "12 PM", event: "" },
+  { time: "1 PM", event: "" },
+  { time: "2 PM", event: "" },
+  { time: "3 PM", event: "" },
+  { time: "4 PM", event: "" },
+  { time: "5 PM", event: "" },
+];
 
-//function to check each hour block to see if it is past (gray), present (red), or future (green).
-$.each(currentColor, function (i, hour) {
-  var hourGap = parseInt($(this).attr("id"));
-  if (hourGap === now) {
-    $(this).next().addClass("present");
-  } else if (hourGap < now) {
-    $(this).next().addClass("past");
-  } else if (hourGap > now) {
-    $(this).next().addClass("future");
-  }
+/* Local Storage check */
+var workEvents = JSON.parse(localStorage.getItem("workDay"));
+if (workEvents) {
+  planWorkday = workEvents;
+}
+
+/* Current Day */
+$("#currentDay").text(today);
+
+/* Create rows */
+planWorkday.forEach(function(timeBlock, index) {
+	var timeLabel = timeBlock.time;
+	var blockColor = colorRow(timeLabel);
+	var row =
+		'<div class="time-block" id="' +
+		index +
+		'"><div class="row no-gutters input-group"><div class="col-sm col-lg-1 input-group-prepend hour justify-content-sm-end pr-3 pt-3">' +
+		timeLabel +
+		'</div><textarea class="form-control ' +
+		blockColor +
+		'">' +
+		timeBlock.event +
+		'</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-save"></i></button></div></div></div>';
+
+	/* Adding rows to container div */
+	$(".container").append(row);
 });
 
-//color-code each time-block< need make changes here
+/* Color rows based on current time */
+function colorRow(time) {
+	var planNow = moment(now, "H A");
+	var planEntry = moment(time, "H A");
+	if (planNow.isBefore(planEntry) === true) {
+		return "future";
+	} else if (planNow.isAfter(planEntry) === true) {
+		return "past";
+	} else {
+		return "present";
+	}
+}
 
-$(".saveBtn").on("click", function (event) {
-  var calendarItem =
-    event.target.parentElement.previousElementSibling.children[0].value;
-  localStorage.setItem(event.target.attributes[0].value, calendarItem);
-});
+/* Save Events */
+$(".saveBtn").on("click", function() {
+	var blockID = parseInt(
+		$(this)
+			.closest(".time-block")
+			.attr("id")
+	);
+	var userEntry = $.trim(
+		$(this)
+			.parent()
+			.siblings("textarea")
+			.val()
+	);
+	planWorkday[blockID].event = userEntry;
 
-$(document).ready(function () {
-  if (localStorage["9am"] !== null && localStorage["9am"] !== undefined) {
-    var nineAm = $("<p>" + localStorage["9am"] + "</p>");
-    $("#nineAm").append(nineAm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["10am"] !== null && localStorage["10am"] !== undefined) {
-    var tenAm = $("<p>" + localStorage["10am"] + "</p>");
-    $("#tenAm").append(tenAm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["11am"] !== null && localStorage["11am"] !== undefined) {
-    var elevenAm = $("<p>" + localStorage["11am"] + "</p>");
-    $("#elevenAm").append(elevenAm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["12pm"] !== null && localStorage["12pm"] !== undefined) {
-    var twelvePm = $("<p>" + localStorage["12pm"] + "</p>");
-    $("#twelvePm").append(twelvePm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["1pm"] !== null && localStorage["1pm"] !== undefined) {
-    var onePm = $("<p>" + localStorage["1pm"] + "</p>");
-    $("#onePm").append(onePm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["2pm"] !== null && localStorage["2pm"] !== undefined) {
-    var twoPm = $("<p>" + localStorage["2pm"] + "</p>");
-    $("#twoPm").append(twoPm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["3pm"] !== null && localStorage["3pm"] !== undefined) {
-    var threePm = $("<p>" + localStorage["3pm"] + "</p>");
-    $("#threePm").append(threePm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["4pm"] !== null && localStorage["4pm"] !== undefined) {
-    var fourPm = $("<p>" + localStorage["4pm"] + "</p>");
-    $("#fourPm").append(fourPm[0].innerText);
-  } else {
-    ("");
-  }
-  if (localStorage["5pm"] !== null && localStorage["5pm"] !== undefined) {
-    var fivePm = $("<p>" + localStorage["5pm"] + "</p>");
-    $("#fivePm").append(fivePm[0].innerText);
-  } else {
-    ("");
-  }
+	/* Set local storage */
+	localStorage.setItem("workDay", JSON.stringify(planWorkday));
 });
