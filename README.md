@@ -44,6 +44,13 @@ old code:
 <img width="475" alt="Screen Shot 2021-11-21 at 8 05 33 PM" src="https://user-images.githubusercontent.com/91921941/142786979-69b09859-f7dd-46ba-bf64-8728507062f4.png">
 
 
+and then I change to:
+
+
+<img width="1068" alt="Screen Shot 2021-11-21 at 8 06 59 PM" src="https://user-images.githubusercontent.com/91921941/142787054-ef110b29-9ffd-417c-a872-c62ec9bc7eb4.png">
+
+
+
 
 
 
