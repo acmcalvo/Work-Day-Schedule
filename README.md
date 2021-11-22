@@ -36,6 +36,13 @@ propably the most challenge part is for me Local Storage  still have problem und
 
 <img width="525" alt="Screen Shot 2021-11-21 at 7 59 33 PM" src="https://user-images.githubusercontent.com/91921941/142786771-2edc7ab2-9683-4745-bc6a-5029e2154b16.png">
 
+In the begining of this challenge my idea  was created in the html textare and timeblock so write some code on html, but time I change time idea an just create one 
+piece of code on html
+
+old code:
+
+<img width="475" alt="Screen Shot 2021-11-21 at 8 05 33 PM" src="https://user-images.githubusercontent.com/91921941/142786979-69b09859-f7dd-46ba-bf64-8728507062f4.png">
+
 
 
 
