@@ -62,7 +62,7 @@ function colorRow(time) {
 	}
 }
 
-/* Save Events */
+// Save Event
 $(".saveBtn").on("click", function() {
 	var blockID = parseInt(
 		$(this)
