@@ -29,6 +29,12 @@ My first thoght was have a string with variable for any hour,day and time but sp
 <img width="636" alt="Screen Shot 2021-11-21 at 7 50 56 PM" src="https://user-images.githubusercontent.com/91921941/142786243-ddbc8752-6eb7-4767-8dcc-c33c0df68a31.png">
 
 
+propably the most challenge part is for me Local Storage  still have problem understen how to make work, 
+
+<img width="520" alt="Screen Shot 2021-11-21 at 7 58 57 PM" src="https://user-images.githubusercontent.com/91921941/142786630-b06a17d4-a4cd-4367-8f55-e303925c57fa.png"
+     
+     <img width="525" alt="Screen Shot 2021-11-21 at 7 59 33 PM" src="https://user-images.githubusercontent.com/91921941/142786649-76bef468-a1eb-4061-a2ff-3e16b33624de.png">
+
 
 
 
