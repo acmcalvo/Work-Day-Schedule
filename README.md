@@ -49,6 +49,12 @@ and then I change to:
 
 <img width="1068" alt="Screen Shot 2021-11-21 at 8 06 59 PM" src="https://user-images.githubusercontent.com/91921941/142787054-ef110b29-9ffd-417c-a872-c62ec9bc7eb4.png">
 
+then the next task was add color :
+
+
+![Screen Shot 2021-11-21 at 8 09 18 PM](https://user-images.githubusercontent.com/91921941/142787158-0744d3dd-6578-4164-97d2-80d0e3c5814d.png)
+
+
 
 
 
