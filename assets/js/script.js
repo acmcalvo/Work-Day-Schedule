@@ -3,7 +3,7 @@ $(function () {});
 // variable
 var today = moment().format("dddd, MMMM Do");
 var now = moment().format("H A");
- //var hoursArray = [9, 10, 11, 12 , 13, 14, 15, 16, 1, 17];
+// var hoursArray = [9, 10, 11, 12 , 13, 14, 15, 16, 1, 17];
 
 var hoursArray = [
 	{ time: "9 AM", event: "" },
