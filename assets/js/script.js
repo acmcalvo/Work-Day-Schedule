@@ -1,21 +1,21 @@
 $(function () {});
   
-// Variables
-var today = new Date();
+// variable
+var today = moment().format("dddd, MMMM Do");
 var now = moment().format("H A");
-//  var hoursArray = [9, 10, 11, 12 , 13, 14, 15, 16, 1, 17];
+ //var hoursArray = [9, 10, 11, 12 , 13, 14, 15, 16, 1, 17];
 
-// var hoursArray = [
-// 	{ time: "9 AM", event: "" },
-// 	{ time: "10 AM", event: "" },
-// 	{ time: "11 AM", event: "" },
-// 	{ time: "12 PM", event: "" },
-// 	{ time: "1 PM", event: "" },
-// 	{ time: "2 PM", event: "" },
-// 	{ time: "3 PM", event: "" },
-// 	{ time: "4 PM", event: "" },
-// 	{ time: "5 PM", event: "" },
-//   ];
+var hoursArray = [
+	{ time: "9 AM", event: "" },
+	{ time: "10 AM", event: "" },
+	{ time: "11 AM", event: "" },
+	{ time: "12 PM", event: "" },
+	{ time: "1 PM", event: "" },
+	{ time: "2 PM", event: "" },
+	{ time: "3 PM", event: "" },
+	{ time: "4 PM", event: "" },
+	{ time: "5 PM", event: "" },
+  ];
 
 
 
