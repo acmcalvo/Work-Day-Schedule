@@ -24,6 +24,8 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
+
+
 My first thoght was have a string with variable for any hour,day and time but spend time with a TA  and change my approach:
 
 <img width="636" alt="Screen Shot 2021-11-21 at 7 50 56 PM" src="https://user-images.githubusercontent.com/91921941/142786243-ddbc8752-6eb7-4767-8dcc-c33c0df68a31.png">
@@ -39,6 +41,8 @@ propably the most challenge part is for me Local Storage  still have problem und
 In the begining of this challenge my idea  was created in the html textare and timeblock so write some code on html, but time I change time idea an just create one 
 piece of code on html
 
+
+
 old code:
 
 <img width="475" alt="Screen Shot 2021-11-21 at 8 05 33 PM" src="https://user-images.githubusercontent.com/91921941/142786979-69b09859-f7dd-46ba-bf64-8728507062f4.png">
@@ -53,6 +57,10 @@ then the next task was add color :
 
 
 ![Screen Shot 2021-11-21 at 8 09 18 PM](https://user-images.githubusercontent.com/91921941/142787158-0744d3dd-6578-4164-97d2-80d0e3c5814d.png)
+
+
+Special thanks to all the TA.
+
 
 
 
