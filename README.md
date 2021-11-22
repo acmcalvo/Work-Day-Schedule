@@ -61,6 +61,9 @@ then the next task was add color :
 Special thanks to all the TA.
 
 
+Github: https://github.com/acmcalvo/Work-Day-Schedule.git 
+Deployed https://acmcalvo.github.io/Work-Day-Schedule/
+
 
 
 
